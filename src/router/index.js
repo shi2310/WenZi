@@ -7,6 +7,11 @@ import Users from '@/pages/Users'
 
 Vue.use(Router)
 
+const VueRouterPush = Router.prototype.push
+Router.prototype.push = function push(to) {
+    return VueRouterPush.call(this, to).catch(err => err)
+}
+
 const router = new Router({
     routes: [{
             path: '/',
