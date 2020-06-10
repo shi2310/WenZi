@@ -3,13 +3,22 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "start": "cross-env API=/api vue-cli-service serve",
+    "build": "cross-env API=http://47.105.14.11/api vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "core-js": "^3.6.5",
-    "vue": "^2.6.11"
+    "cross-env": "^7.0.2",
+    "element-ui": "^2.13.2",
+    "less": "^3.11.3",
+    "less-loader": "^6.1.0",
+    "lodash": "^4.17.15",
+    "mockjs": "^1.1.0",
+    "vue": "^2.6.11",
+    "vue-router": "^3.3.2",
+    "vuex": "^3.4.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.4.0",
