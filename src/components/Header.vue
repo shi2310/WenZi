@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <div class="logo"><i class="el-icon-s-promotion"></i> 李文后台管理系统</div>
+    <div class="logo"><i class="el-icon-s-promotion"></i> 后台管理</div>
     <div class="user-info">
       <el-dropdown
         trigger="click"

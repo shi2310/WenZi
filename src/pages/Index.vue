@@ -36,7 +36,7 @@ export default {
 .el-aside {
   color: #333;
   background-color: #e9eef3;
-  width: 200px !important;
+  width: auto !important;
 }
 
 .el-main {
