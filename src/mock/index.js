@@ -34,18 +34,18 @@ const dataTmp = {
 
 // 拦截ajax请求，配置mock的数据
 Mock.mock(/\/api\/list/, 'get', () => {
+    console.log(req)
+    const {
+        pageSize
+    } = JSON.parse(req.body)
+
     const List = []
-    for (let i = 0; i < 12; i++) {
+    for (let i = 0; i < pageSize; i++) {
         List.push(Mock.mock(dataTmp))
     }
     const data = {
         List,
-        PageInfo: {
-            CurrentPage: 1,
-            PageSize: 10,
-            TotalCount: 45,
-            TotalPage: 5
-        }
+        TotalCount:45
     }
     return {
         Success: true,
